@@ -1,6 +1,5 @@
 import os
 import numpy as np
-import matplotlib
 import requests
 import shutil
 cwd = os.getcwd()
