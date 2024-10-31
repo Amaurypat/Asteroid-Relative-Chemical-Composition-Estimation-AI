@@ -1,13 +1,16 @@
 # Asteroid Chemical Composition AI
+*Sorts and classifies asteroids using the NASA JPL API, Generates samples to be used in training data set by processing the refractive index of metals, Contains main script for the AI*
 
 C, S, and M are abbreviation of the 3 major asteroid classifications (Carbonaceous, Silicate, Metallic)
 
 Import any asteroid spectral reflectance data (With consistent datapoints between wavelengths of 0.8 - 2.4 micrometers), then normalise the data at a value of 1 micrometer and interpolate it using:
 
---from scipy import interpolate
+```
+from scipy import interpolate
 
---f = interpolate.interp1d(wavelengthlist0, reflectancelist0)
---meanreflectance = f(np.arange(0.85, 2.4, 0.0025))
+f = interpolate.interp1d(wavelengthlist0, reflectancelist0)
+meanreflectance = f(np.arange(0.85, 2.4, 0.0025))
+```
 
 
 There are a total of 33 materials considered here with the average carbonaceous and silicate composition (Total 35 possible constituents), feel free to add more but changes will need to be done.
