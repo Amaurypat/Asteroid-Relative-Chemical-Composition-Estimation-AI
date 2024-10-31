@@ -159,6 +159,7 @@ C/
 AI/
 avr.py
 ReddySpectraSorter.py
+USE_AI.py
 
 Lossvalues.csv
 MSE 30 Epochs, Run 2.txt
