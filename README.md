@@ -6,10 +6,11 @@ C, S, and M are abbreviation of the 3 major asteroid classifications (Carbonaceo
 Import any asteroid spectral reflectance data (With consistent datapoints between wavelengths of 0.85 - 2.4 micrometers), then normalise the data at a value of 1 micrometer and interpolate it using:
 
 ```
+import numpy as np
 from scipy import interpolate
 
-f = interpolate.interp1d(wavelengthlist0, reflectancelist0)
-meanreflectance = f(np.arange(0.85, 2.4, 0.0025))
+f = interpolate.interp1d(wavelengthlist, reflectancelist)
+normalizedreflectance = f(np.arange(0.85, 2.4, 0.0025))
 ```
 
 There are a total of 33 materials considered here with the average carbonaceous and silicate composition (Total 35 possible constituents), feel free to add more but changes will need to be done.
